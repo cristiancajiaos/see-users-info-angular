@@ -3,9 +3,9 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faComment, faChevronLeft, IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import { CommentsService } from './comments.service';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Comment } from '../classes/comment';
+import { CommentsService } from '../services/comments.service';
 
 @Component({
   selector: 'app-comments',

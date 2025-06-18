@@ -5,7 +5,8 @@ import { CommentsComponent } from './comments/comments.component';
 export const routes: Routes = [
   {
     path: 'users',
-    component: UsersComponent
+    component: UsersComponent,
+    children: []
   },
   {
     path: 'comments/:id',

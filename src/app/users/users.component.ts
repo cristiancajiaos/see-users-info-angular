@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { User } from '../classes/user';
-import { UsersService } from './users.service';
 import { NgFor, NgIf } from '@angular/common';
 import { faUser, faComment, faList, faPaperPlane, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, ActivatedRoute } from '@angular/router';
+import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-users',
