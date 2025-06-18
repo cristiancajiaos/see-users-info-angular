@@ -30,13 +30,14 @@ export class UsersComponent {
   }
 
   ngOnInit() {
+    this.setUsers();
+  }
+
+  public setUsers(): void {
     this.usersService.getUsers().subscribe(users => {
       this.users = users;
     });
   }
 
-  public foo(): void {
-
-  }
 
 }

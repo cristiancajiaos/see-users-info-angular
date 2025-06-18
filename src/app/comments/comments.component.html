@@ -1,10 +1,67 @@
 <section class="comments">
   <h3>
     <fa-icon [icon]="faComment"></fa-icon>
-    Comments for ID {{id}}
+    Comments for ID {{ id }}
   </h3>
 
-  <p>Here goes the table</p>
+  <ng-container *ngFor="let comment of comments">
+    <form class="mb-4">
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <div class="form-group">
+            <label>Post ID</label>
+            <input type="text"
+            class="form-control"
+            [value]="comment.postId"
+            readonly />
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="form-group">
+            <label>ID</label>
+            <input
+              type="text"
+              class="form-control"
+              [value]="comment.id"
+              readonly
+            />
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="form-group">
+            <label>Name</label>
+            <input
+              type="text"
+              class="form-control"
+              [value]="comment.name"
+              readonly
+            />
+          </div>
+        </div>
+        <div class="col-12 col-lg-3">
+          <div class="form-group">
+            <label>Email</label>
+            <input
+              type="text"
+              class="form-control"
+              [value]="comment.email"
+              readonly
+            />
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-group">
+            <label>Body</label>
+            <textarea
+              class="form-control"
+              [value]="comment.body"
+              readonly
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+  </ng-container>
 
   <a (click)="goBack()" class="btn btn-danger">
     <fa-icon [icon]="faChevronLeft"></fa-icon> Go Back to Users
