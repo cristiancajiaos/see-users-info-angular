@@ -6,7 +6,8 @@
         <tr>
           <th>Name</th>
           <th>Username</th>
-          <th>Main</th>
+          <th>Email</th>
+          <th>User Detail</th>
           <th>Actions</th>
       </thead>
       <tbody>
@@ -15,15 +16,24 @@
           <td>{{user.username}}</td>
           <td>{{user.email}}</td>
           <td>
-            <a [routerLink]="['/comments', user.id]" [ngbTooltip]="'Comments'">
+            <a [routerLink]="['/user', user.id]" ngbTooltip="See User Detail">
+              <fa-layers [fixedWidth]="true">
+                <fa-icon [icon]="faUser"></fa-icon>
+                <fa-icon [icon]="faCircleInfo" transform="down-10 right-10"></fa-icon>
+              </fa-layers>
+            </a>
+          </td>
+          <td>
+            <a [routerLink]="['/comments', user.id]"
+               [ngbTooltip]="'Show Comments'">
               <fa-icon [icon]="faComment"size="2x" [fixedWidth]="true">
               </fa-icon>
             </a>
-            <a href="#" [ngbTooltip]="'Todos'">
+            <a href="#" [ngbTooltip]="'Show Todos'">
               <fa-icon [icon]="faList" size="2x" [fixedWidth]="true">
               </fa-icon>
             </a>
-            <a href="#" [ngbTooltip]="'Posts'">
+            <a href="#" [ngbTooltip]="'Show Posts'">
               <fa-icon [icon]="faPaperPlane" size="2x" [fixedWidth]="true">
               </fa-icon>
             </a>

@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { User } from '../classes/user';
 import { NgFor, NgIf } from '@angular/common';
-import { faUser, faComment, faList, faPaperPlane, IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faComment, faList, faPaperPlane, faCircleInfo, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, ActivatedRoute } from '@angular/router';
@@ -19,7 +19,8 @@ export class UsersComponent {
   public faUser: IconDefinition = faUser;
   public faComment: IconDefinition = faComment;
   public faList: IconDefinition = faList;
-  public faPaperPlane: IconDefinition = faPaperPlane
+  public faPaperPlane: IconDefinition = faPaperPlane;
+  public faCircleInfo: IconDefinition = faCircleInfo;
 
   public users: User[] = [];
 
