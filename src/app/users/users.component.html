@@ -1,0 +1,22 @@
+<section class="users">
+  <h3>Users <fa-icon [icon]="faUser"></fa-icon></h3>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Main</th>
+          <th>Actions</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.name}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.email}}</td>
+          <td>...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
