@@ -14,7 +14,20 @@
           <td>{{user.name}}</td>
           <td>{{user.username}}</td>
           <td>{{user.email}}</td>
-          <td>...</td>
+          <td>
+            <a [routerLink]="['/comments', user.id]" [ngbTooltip]="'Comments'">
+              <fa-icon [icon]="faComment"size="2x" [fixedWidth]="true">
+              </fa-icon>
+            </a>
+            <a href="#" [ngbTooltip]="'Todos'">
+              <fa-icon [icon]="faList" size="2x" [fixedWidth]="true">
+              </fa-icon>
+            </a>
+            <a href="#" [ngbTooltip]="'Posts'">
+              <fa-icon [icon]="faPaperPlane" size="2x" [fixedWidth]="true">
+              </fa-icon>
+            </a>
+          </td>
         </tr>
       </tbody>
     </table>
