@@ -8,7 +8,7 @@ import { Comment } from '../classes/comment';
 })
 export class CommentsService {
 
-  private baseUrl = 'https://jsonplaceholder.typicode.com';
+  private baseUrl: string = 'https://jsonplaceholder.typicode.com';
 
   constructor(
     private http: HttpClient
