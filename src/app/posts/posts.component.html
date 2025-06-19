@@ -1,20 +1,45 @@
 <section class="posts">
   <h3>
     <fa-icon [icon]="faPaperPlane"></fa-icon>
-    Posts for {{id}}
+    Posts for {{ id }}
   </h3>
 
   <ng-container *ngIf="loadingPosts">
     <div class="text-center">
-      <h4>Loading...<fa-icon [icon]="faSpinner" [spin]="true" [fixedWidth]="true"></fa-icon></h4>
+      <h4>
+        Loading...<fa-icon
+          [icon]="faSpinner"
+          [spin]="true"
+          [fixedWidth]="true"
+        ></fa-icon>
+      </h4>
     </div>
   </ng-container>
   <ng-container *ngIf="!loadingPosts">
-    <p>{{posts | json}}</p>
+    <div class="mb-2">
+      <div ngbAccordion>
+        <div ngbAccordionItem *ngFor="let post of posts">
+          <div ngbAccordionHeader>
+            <button ngbAccordionButton>
+              {{ post.title }}
+            </button>
+          </div>
+          <div ngbAccordionCollapse>
+            <div ngbAccordionBody>
+              <ng-template>
+                <div class="row">
+                  <div class="col-6"><strong>ID</strong>: {{ post.id }}</div>
+                </div>
+                <p>{{ post.body }}</p>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </ng-container>
 
   <a [routerLink]="['/users']" class="btn btn-danger">
     <fa-icon [icon]="faChevronLeft"></fa-icon> Go to Users
   </a>
 </section>
-

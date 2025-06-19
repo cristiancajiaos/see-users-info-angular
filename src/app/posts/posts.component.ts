@@ -1,15 +1,16 @@
-import { Location, CommonModule } from '@angular/common';
+import { Location, CommonModule, NgFor } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faChevronLeft, faPaperPlane, faSpinner, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { PostService } from '../services/post.service';
 import { Post } from '../classes/post';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-posts',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, RouterModule],
+  imports: [CommonModule, FontAwesomeModule, RouterModule, NgbAccordionModule, NgFor],
   providers: [PostService],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.scss'
