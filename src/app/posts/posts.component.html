@@ -4,7 +4,15 @@
     Posts for {{id}}
   </h3>
 
-  <p>Here goes data</p>
+  <ng-container *ngIf="loadingPosts">
+    <div class="text-center">
+      <h4>Loading...<fa-icon [icon]="faSpinner" [spin]="true" [fixedWidth]="true"></fa-icon></h4>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!loadingPosts">
+    <p>{{posts | json}}</p>
+  </ng-container>
+
 
   <a [routerLink]="['/users']" class="btn btn-danger">
     <fa-icon [icon]="faChevronLeft"></fa-icon> Go to Users
