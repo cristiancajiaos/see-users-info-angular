@@ -3,7 +3,6 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faChevronLeft, faPaperPlane, faSpinner, IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import { TodosService } from '../services/todos.service';
 import { PostService } from '../services/post.service';
 import { Post } from '../classes/post';
 
