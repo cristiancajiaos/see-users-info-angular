@@ -24,16 +24,15 @@
             </a>
           </td>
           <td>
-            <a [routerLink]="['/comments', user.id]"
-               [ngbTooltip]="'Show Comments'">
+            <a [routerLink]="['/comments', user.id]" ngbTooltip="Show Comments">
               <fa-icon [icon]="faComment"size="2x" [fixedWidth]="true">
               </fa-icon>
             </a>
-            <a href="#" [ngbTooltip]="'Show Todos'">
+            <a [routerLink]="['/todos', user.id]" ngbTooltip="Show Todos">
               <fa-icon [icon]="faList" size="2x" [fixedWidth]="true">
               </fa-icon>
             </a>
-            <a href="#" [ngbTooltip]="'Show Posts'">
+            <a [routerLink]="['/posts', user.id]" ngbTooltip="Show Posts">
               <fa-icon [icon]="faPaperPlane" size="2x" [fixedWidth]="true">
               </fa-icon>
             </a>

@@ -11,7 +11,7 @@ import { faChevronLeft, IconDefinition } from '@fortawesome/free-solid-svg-icons
   styleUrl: './not-found.component.scss'
 })
 export class NotFoundComponent {
-  faChevronLeft: IconDefinition = faChevronLeft;
+  public faChevronLeft: IconDefinition = faChevronLeft;
 
   constructor() {
 
