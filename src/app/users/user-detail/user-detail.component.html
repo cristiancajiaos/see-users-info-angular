@@ -210,7 +210,7 @@
     <hr />
   </ng-container>
 
-  <a (click)="goBack()" class="btn btn-danger">
+  <a [routerLink]="['/users']" class="btn btn-danger">
     <fa-icon [icon]="faChevronLeft"></fa-icon>
     Go Back to Users
   </a>

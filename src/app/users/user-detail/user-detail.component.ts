@@ -2,14 +2,14 @@ import { Component, inject } from '@angular/core';
 import { User } from '../../classes/user';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faUser, faChevronLeft, faInfo, faLocationDot, faBuilding, faSpinner, IconDefinition } from '@fortawesome/free-solid-svg-icons';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { UsersService } from '../../services/users.service';
 import { CommonModule, Location, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-user-detail',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, NgIf],
+  imports: [CommonModule, FontAwesomeModule, NgIf, RouterModule],
   providers: [UsersService],
   templateUrl: './user-detail.component.html',
   styleUrl: './user-detail.component.scss'

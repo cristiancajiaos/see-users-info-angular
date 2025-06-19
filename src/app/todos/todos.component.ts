@@ -1,6 +1,6 @@
 import { Location, CommonModule, NgFor } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import {
@@ -16,7 +16,7 @@ import { UiSwitchModule } from 'ngx-ui-switch';
 @Component({
   selector: 'app-todos',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, NgFor, UiSwitchModule],
+  imports: [CommonModule, FontAwesomeModule, NgFor, UiSwitchModule, RouterModule],
   providers: [TodosService],
   templateUrl: './todos.component.html',
   styleUrl: './todos.component.scss',

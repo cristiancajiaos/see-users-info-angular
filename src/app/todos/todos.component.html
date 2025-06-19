@@ -1,7 +1,7 @@
 <section class="todos">
   <h3>
     <fa-icon [icon]="faList"></fa-icon>
-    Todos for {{ id }}
+    Todos for ID {{ id }}
   </h3>
 
   <ng-container *ngIf="loadingTodos">
@@ -36,7 +36,7 @@
     </div>
   </ng-container>
 
-  <a (click)="goBack()" class="btn btn-danger">
+  <a [routerLink]="['/users']" class="btn btn-danger">
     <fa-icon [icon]="faChevronLeft"></fa-icon>
     Go Back to Users
   </a>
