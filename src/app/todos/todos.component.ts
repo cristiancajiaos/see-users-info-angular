@@ -11,11 +11,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { TodosService } from '../services/todos.service';
 import { Todo } from '../classes/todo';
+import { UiSwitchModule } from 'ngx-ui-switch';
 
 @Component({
   selector: 'app-todos',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, NgFor],
+  imports: [CommonModule, FontAwesomeModule, NgFor, UiSwitchModule],
   providers: [TodosService],
   templateUrl: './todos.component.html',
   styleUrl: './todos.component.scss',
