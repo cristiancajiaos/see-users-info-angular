@@ -1,14 +1,37 @@
 <section class="todos">
   <h3>
     <fa-icon [icon]="faList"></fa-icon>
-    Todos for {{id}}
+    Todos for {{ id }}
   </h3>
 
-  <p>Here goes data</p>
-  
+  <ng-container *ngIf="loadingTodos">
+    <div class="text-center">
+      <h4>Loading...<fa-icon [icon]="faSpinner" [spin]="true" [fixedWidth]="true"></fa-icon></h4>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!loadingTodos">
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let todo of todos">
+            <td>{{ todo.id }}</td>
+            <td>{{ todo.title }}</td>
+            <td>{{ todo.completed }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-container>
+
   <a (click)="goBack()" class="btn btn-danger">
     <fa-icon [icon]="faChevronLeft"></fa-icon>
     Go Back to Users
   </a>
 </section>
-
